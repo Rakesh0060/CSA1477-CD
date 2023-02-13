@@ -4,10 +4,8 @@ int p_count=0;
 int n_count=0;
 %}
 %%
-[+]?([0-9])+  {
-p_count++; printf("Positive Integer:%s\n",yytext);}
-[-]([0-9])+   {
-n_count++; printf("negative Integer:%s\n",yytext);}
+[+]?([0-9])+ {p_count++; printf("Positive Integer:%s\n",yytext);}
+[-]([0-9])+ {n_count++; printf("negative Integer:%s\n",yytext);}
 %%
 int yywrap(void){}
 void main(int argc[],char *argv[])
